@@ -1,0 +1,139 @@
+{
+  "Abbr": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Yes": 2
+  },
+  "Aspect": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Hab": 2,
+    "Imp": 3,
+    "Perf": 4,
+    "Prog": 5,
+    "Prosp": 6
+  },
+  "Case": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Abl": 2,
+    "Acc": 3,
+    "Dat": 4,
+    "Equ": 5,
+    "Gen": 6,
+    "Ins": 7,
+    "Loc": 8,
+    "Nom": 9
+  },
+  "Echo": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Rdp": 2
+  },
+  "Evident": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Fh": 2,
+    "Nfh": 3
+  },
+  "Mood": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Cnd": 2,
+    "Des": 3,
+    "DesPot": 4,
+    "Gen": 5,
+    "GenNec": 6,
+    "GenPot": 7,
+    "Imp": 8,
+    "Ind": 9,
+    "Nec": 10,
+    "Opt": 11,
+    "Pot": 12
+  },
+  "NumType": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Card": 2,
+    "Dist": 3,
+    "Ord": 4
+  },
+  "Number": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Plur": 2,
+    "Sing": 3
+  },
+  "Number[psor]": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Plur": 2,
+    "Sing": 3
+  },
+  "Person": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "1": 2,
+    "2": 3,
+    "3": 4
+  },
+  "Person[psor]": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "1": 2,
+    "2": 3,
+    "3": 4
+  },
+  "Polarity": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Neg": 2,
+    "Pos": 3
+  },
+  "PronType": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Dem": 2,
+    "Ind": 3,
+    "Int": 4,
+    "Loc": 5,
+    "Prs": 6,
+    "Rcp": 7
+  },
+  "Reflex": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Yes": 2
+  },
+  "Tense": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Fut": 2,
+    "Past": 3,
+    "Pres": 4
+  },
+  "Typo": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Yes": 2
+  },
+  "VerbForm": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Conv": 2,
+    "Part": 3,
+    "Vnoun": 4
+  },
+  "Voice": {
+    "<PAD>": 0,
+    "<None>": 1,
+    "Cau": 2,
+    "CauCau": 3,
+    "CauPass": 4,
+    "Pass": 5,
+    "PassPass": 6,
+    "PassRfl": 7,
+    "Rcp": 8,
+    "Rfl": 9
+  }
+}

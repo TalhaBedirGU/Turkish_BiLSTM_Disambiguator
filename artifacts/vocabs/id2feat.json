@@ -1,0 +1,139 @@
+{
+  "Abbr": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Yes"
+  },
+  "Aspect": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Hab",
+    "3": "Imp",
+    "4": "Perf",
+    "5": "Prog",
+    "6": "Prosp"
+  },
+  "Case": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Abl",
+    "3": "Acc",
+    "4": "Dat",
+    "5": "Equ",
+    "6": "Gen",
+    "7": "Ins",
+    "8": "Loc",
+    "9": "Nom"
+  },
+  "Echo": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Rdp"
+  },
+  "Evident": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Fh",
+    "3": "Nfh"
+  },
+  "Mood": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Cnd",
+    "3": "Des",
+    "4": "DesPot",
+    "5": "Gen",
+    "6": "GenNec",
+    "7": "GenPot",
+    "8": "Imp",
+    "9": "Ind",
+    "10": "Nec",
+    "11": "Opt",
+    "12": "Pot"
+  },
+  "NumType": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Card",
+    "3": "Dist",
+    "4": "Ord"
+  },
+  "Number": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Plur",
+    "3": "Sing"
+  },
+  "Number[psor]": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Plur",
+    "3": "Sing"
+  },
+  "Person": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "1",
+    "3": "2",
+    "4": "3"
+  },
+  "Person[psor]": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "1",
+    "3": "2",
+    "4": "3"
+  },
+  "Polarity": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Neg",
+    "3": "Pos"
+  },
+  "PronType": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Dem",
+    "3": "Ind",
+    "4": "Int",
+    "5": "Loc",
+    "6": "Prs",
+    "7": "Rcp"
+  },
+  "Reflex": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Yes"
+  },
+  "Tense": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Fut",
+    "3": "Past",
+    "4": "Pres"
+  },
+  "Typo": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Yes"
+  },
+  "VerbForm": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Conv",
+    "3": "Part",
+    "4": "Vnoun"
+  },
+  "Voice": {
+    "0": "<PAD>",
+    "1": "<None>",
+    "2": "Cau",
+    "3": "CauCau",
+    "4": "CauPass",
+    "5": "Pass",
+    "6": "PassPass",
+    "7": "PassRfl",
+    "8": "Rcp",
+    "9": "Rfl"
+  }
+}

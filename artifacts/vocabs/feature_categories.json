@@ -1,0 +1,139 @@
+{
+  "Abbr": [
+    "<PAD>",
+    "<None>",
+    "Yes"
+  ],
+  "Aspect": [
+    "<PAD>",
+    "<None>",
+    "Hab",
+    "Imp",
+    "Perf",
+    "Prog",
+    "Prosp"
+  ],
+  "Case": [
+    "<PAD>",
+    "<None>",
+    "Abl",
+    "Acc",
+    "Dat",
+    "Equ",
+    "Gen",
+    "Ins",
+    "Loc",
+    "Nom"
+  ],
+  "Echo": [
+    "<PAD>",
+    "<None>",
+    "Rdp"
+  ],
+  "Evident": [
+    "<PAD>",
+    "<None>",
+    "Fh",
+    "Nfh"
+  ],
+  "Mood": [
+    "<PAD>",
+    "<None>",
+    "Cnd",
+    "Des",
+    "DesPot",
+    "Gen",
+    "GenNec",
+    "GenPot",
+    "Imp",
+    "Ind",
+    "Nec",
+    "Opt",
+    "Pot"
+  ],
+  "NumType": [
+    "<PAD>",
+    "<None>",
+    "Card",
+    "Dist",
+    "Ord"
+  ],
+  "Number": [
+    "<PAD>",
+    "<None>",
+    "Plur",
+    "Sing"
+  ],
+  "Number[psor]": [
+    "<PAD>",
+    "<None>",
+    "Plur",
+    "Sing"
+  ],
+  "Person": [
+    "<PAD>",
+    "<None>",
+    "1",
+    "2",
+    "3"
+  ],
+  "Person[psor]": [
+    "<PAD>",
+    "<None>",
+    "1",
+    "2",
+    "3"
+  ],
+  "Polarity": [
+    "<PAD>",
+    "<None>",
+    "Neg",
+    "Pos"
+  ],
+  "PronType": [
+    "<PAD>",
+    "<None>",
+    "Dem",
+    "Ind",
+    "Int",
+    "Loc",
+    "Prs",
+    "Rcp"
+  ],
+  "Reflex": [
+    "<PAD>",
+    "<None>",
+    "Yes"
+  ],
+  "Tense": [
+    "<PAD>",
+    "<None>",
+    "Fut",
+    "Past",
+    "Pres"
+  ],
+  "Typo": [
+    "<PAD>",
+    "<None>",
+    "Yes"
+  ],
+  "VerbForm": [
+    "<PAD>",
+    "<None>",
+    "Conv",
+    "Part",
+    "Vnoun"
+  ],
+  "Voice": [
+    "<PAD>",
+    "<None>",
+    "Cau",
+    "CauCau",
+    "CauPass",
+    "Pass",
+    "PassPass",
+    "PassRfl",
+    "Rcp",
+    "Rfl"
+  ]
+}
