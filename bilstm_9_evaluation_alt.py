@@ -149,18 +149,32 @@ def evaluate_dataset(char_enc: CharWordEncoder,
         bc, bt = bundle_accuracy_counts(logits, gold_upos, gold_feats, word_mask)
         bundle_corr += bc; bundle_tot += bt
 
+    # --- weighted average over all feature heads ---
+    total_corr_with = sum(feat_corr_with[cat] for cat in feat2id)
+    total_tokens_with = sum(feat_tot_with[cat] for cat in feat2id)
+    weighted_avg_with_none = total_corr_with / max(total_tokens_with, 1)
+
+    total_corr_pres = sum(feat_corr_pres[cat] for cat in feat2id)
+    total_tokens_pres = sum(feat_tot_pres[cat] for cat in feat2id)
+    weighted_avg_present_only = total_corr_pres / max(total_tokens_pres, 1)
+
     results = {
         "loss": total_loss_num / max(total_loss_den, 1),
         "upos_acc": upos_corr / max(upos_tot, 1),
         "feat_acc": {
-            slot: {
-                "with_none":   feat_corr_with[slot] / max(feat_tot_with[slot], 1),
-                "present_only":feat_corr_pres[slot] / max(feat_tot_pres[slot], 1),
+            cat: {
+                "with_none": feat_corr_with[cat] / max(feat_tot_with[cat], 1),
+                "present_only": feat_corr_pres[cat] / max(feat_tot_pres[cat], 1),
             }
-            for slot in feature_slots
+            for cat in feat2id
         },
         "bundle_acc": bundle_corr / max(bundle_tot, 1),
+        "feat_weighted_avg": {               # ← add this new entry
+            "with_none": weighted_avg_with_none,
+            "present_only": weighted_avg_present_only,
+        },
     }
+
     return results
 
 # ---------------- example usage (dev/test) -----------------
@@ -207,13 +221,18 @@ if __name__ == "__main__":
     test_sentences = read_conllu(TEST)
 
     print("DEV results:")
-    r = evaluate_dataset(char_enc, sent_enc, heads, dev_sentences,
+    results = evaluate_dataset(char_enc, sent_enc, heads, dev_sentences,
                          char2id=char2id, upos2id=upos2id, feat2id=feat2id, feature_slots=feature_slots,
                          device=device, max_word_len=MAX_WORD)
-    print(r)
+    print(results)
 
     print("\nTEST results:")
-    r = evaluate_dataset(char_enc, sent_enc, heads, test_sentences,
+    results = evaluate_dataset(char_enc, sent_enc, heads, test_sentences,
                          char2id=char2id, upos2id=upos2id, feat2id=feat2id, feature_slots=feature_slots,
                          device=device, max_word_len=MAX_WORD)
-    print(r)
+    print(results)
+
+    print("\nWeighted average (with None):",
+      results["feat_weighted_avg"]["with_none"])
+    print("Weighted average (present only):",
+      results["feat_weighted_avg"]["present_only"])

@@ -114,7 +114,7 @@ def load_or_build_vocabs():
     # Build from TRAIN, then save
     train_sents = read_conllu(TRAIN)
     char2id, _ = build_char_vocab(train_sents)
-    upos2id, _ = build_upos_vocab(train_sents, add_pad=True)  # Design B
+    upos2id, _ = build_upos_vocab(train_sents, add_pad=True)  
     _, feature_categories, feat2id, _, feature_slots = build_feat_vocab_and_process_features_categories(train_sents)
 
     VOCAB_DIR.mkdir(parents=True, exist_ok=True)
@@ -147,7 +147,7 @@ def run_epoch(models, optimizer, sentences, *,
 
     feat_stats: Dict[str, Dict[str, List[float]]] = {cat: {"with": [0,0], "present": [0,0]} for cat in feature_slots}
 
-    # PAD ids for loss ignore (Design B)
+    # PAD ids for loss ignore 
     pad_upos_id = upos2id["<PAD>"]
     pad_feat_ids = {slot: feat2id[slot]["<PAD>"] for slot in feature_slots}
     # NONE indices (usually 1)

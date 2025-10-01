@@ -1,5 +1,6 @@
 from pathlib import Path
 from typing import Dict, List, Tuple
+import re
 
 import torch
 
@@ -43,7 +44,7 @@ def pretty_print_predictions(forms: List[str], upos_labels: List[str], feats_lab
     feats_labels: per-token dict of {slot: value}, omit <None> entries
     """
     for w, u, f in zip(forms, upos_labels, feats_labels):
-        feats_str = "|".join(f"{k}={v}" for k, v in sorted(f.items())) if f else "—"
+        feats_str = "|".join(f"{k}={v}" for k, v in sorted(f.items())) if f else "_"
         print(f"{w:<20} {u:<6} {feats_str}")
 
 
@@ -164,7 +165,10 @@ if __name__ == "__main__":
 
     char_enc, sent_enc, heads, meta = load_model_from_checkpoint(ckpt_path, device=device)
 
-    forms = ["Okulun", "bahçesinden", "seslendi"]  # example raw tokens
+    input_sentence = input("\nPlease input a Turkish sentence for the morphology parser (Example sentence: 'Talha nereye gidiyor?'): ")
+
+    forms = re.findall(r"[\w']+|[.,!?;\"\-]", input_sentence)
+    
     upos_labels, feats_labels = predict_sentence(
         forms,
         char_enc, sent_enc, heads,
